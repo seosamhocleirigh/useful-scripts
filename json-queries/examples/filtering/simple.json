@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "Name": "Product1",
+            "Color": "Green",
+            "Shape": "Square",
+            "WeightInKgs": 5
+        },
+        {
+            "Name": "Product2",
+            "Color": "Blue",
+            "Shape": "Square",
+            "WeightInKgs": 1
+        },
+        {
+            "Name": "Product3",
+            "Color": "Red",
+            "Shape": "Circle",
+            "WeightInKgs": 3
+        },
+        {
+            "Name": "Product4",
+            "Color": "Yellow",
+            "Shape": "Triangle",
+            "WeightInKgs": 10
+        }
+    ]
+}

@@ -84,3 +84,5 @@ $donutsPSCustomObject.items.item | select topping
 ```
 
 ------
+
+// TODO: first item in list, take, to csv, distinct

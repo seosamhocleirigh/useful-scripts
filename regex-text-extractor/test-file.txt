@@ -1,0 +1,6 @@
+
+The selected answer from Mathias is not a great solution. Get-Content loads the entire file into memory at once, which will fail or freeze on large files. – Kolob Canyon Jun 7 '19 at 18:23
+@KolobCanyon_1 that is completely untrue. By default Get-Content loads each line as one object in the pipeline. If you're piping to a function that doesn't specify a process block, and spits out another object per line into the pipeline, then that function is the problem. Any problems with loading the full content into memory are not the fault of Get-Content. – The Fish Jul 4 '19 at 12:39
+@TheFish foreach($line in Get-Content .\file.txt) It will load the entire file into memory before it begins iterating. If you don't believe me, go get a 1GB log file and try it. – Kolob Canyon Jul 5 '19 at 15:00
+1
+@KolobCanyon_2 That's not what you said. You said that Get-Content loads it all into memory which is not true. @KolobCanyon_3 Your changed example of foreach would, yes; foreach is not pipeline aware. Get-Content .\file.txt | ForEach-Object -Process {} is pipeline aware, and will not load the entire file into memory. By default Get-Content will pass one line at a time through the pipeline. – The Fish Jul 8 '19 at 10:46
